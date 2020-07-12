@@ -32,5 +32,15 @@ namespace PragimCore.Models
             this._employeeList.Add(employee);
             return employee;
         }
+
+        public Employee Update(Employee employeeChanges)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Employee Delete(int Id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
