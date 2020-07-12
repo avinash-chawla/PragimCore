@@ -1,7 +1,11 @@
 @model Employee
+@{
+    var photoPath = "~/images/" + (Model.PhotoPath ?? "noimage.jpg");
+}
 
 <ul>
     <li>@Model.Name</li>
     <li>@Model.Email</li>
     <li>@Model.Department</li>
+    <li><img src="@photoPath" asp-append-version="true" width="150px" height="150px"></li>
 </ul>

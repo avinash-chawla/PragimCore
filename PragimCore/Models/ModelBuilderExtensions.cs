@@ -15,13 +15,13 @@ namespace PragimCore.Models
                     Email = "mark@gmail.com"
                 }, new Employee
                 {
-                    Id = 1,
+                    Id = 2,
                     Name = "John",
                     Department = Department.Payroll,
                     Email = "john@gmail.com"
                 }, new Employee
                 {
-                    Id = 1,
+                    Id = 3,
                     Name = "Mary",
                     Department = Department.IT,
                     Email = "mary@gmail.com"

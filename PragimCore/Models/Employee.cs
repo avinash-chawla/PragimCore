@@ -15,5 +15,7 @@ namespace PragimCore.Models
 
         [Required]
         public Department? Department { get; set; }
+
+        public string PhotoPath { get; set; }
     }
 }
