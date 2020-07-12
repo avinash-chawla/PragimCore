@@ -6,5 +6,6 @@ namespace PragimCore.Models
     {
         IEnumerable<Employee> GetEmployees();
         Employee GetEmployee(int id);
+        Employee Add(Employee employee);
     }
 }

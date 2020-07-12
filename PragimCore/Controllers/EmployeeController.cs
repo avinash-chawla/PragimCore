@@ -25,5 +25,23 @@ namespace PragimCore.Controllers
             var employee = _context.GetEmployee(id);
             return View(employee);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                var newEmployee = _context.Add(employee);
+                return RedirectToAction(nameof(Details), new { id = newEmployee.Id });
+                // return RedirectToAction(nameof(Index));
+            }
+            return View();
+        }
     }
 }
