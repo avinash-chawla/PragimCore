@@ -1,0 +1,10 @@
+using System.Collections.Generic;
+
+namespace PragimCore.Models
+{
+    public interface IEmployeeRepository
+    {
+        IEnumerable<Employee> GetEmployees();
+        Employee GetEmployee(int id);
+    }
+}
