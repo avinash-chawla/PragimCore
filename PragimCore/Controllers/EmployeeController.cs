@@ -26,9 +26,15 @@ namespace PragimCore.Controllers
             return View(employees);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int? id)
         {
-            var employee = _context.GetEmployee(id);
+            throw new Exception("Some Error");
+            var employee = _context.GetEmployee(id.Value);
+            if (employee == null)
+            {
+                Response.StatusCode = 404;
+                return View("EmployeeNotFound", id.Value);
+            }
             return View(employee);
         }
 
