@@ -28,7 +28,6 @@ namespace PragimCore.Controllers
 
         public IActionResult Details(int? id)
         {
-            throw new Exception("Some Error");
             var employee = _context.GetEmployee(id.Value);
             if (employee == null)
             {
