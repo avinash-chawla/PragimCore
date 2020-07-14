@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using PragimCore.Models;
@@ -20,12 +21,14 @@ namespace PragimCore.Controllers
             _hostingEnvironment = hostingEnvironment;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var employees = _context.GetEmployees();
             return View(employees);
         }
 
+        [AllowAnonymous]
         public IActionResult Details(int? id)
         {
             var employee = _context.GetEmployee(id.Value);
